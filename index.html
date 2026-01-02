@@ -21,30 +21,32 @@
   <meta property="twitter:image" content="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1200">
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script type="importmap">
-  {
-    "imports": {
-      "react": "https://esm.sh/react@18.3.1",
-      "react-dom/": "https://esm.sh/react-dom@18.3.1/",
-      "react/": "https://esm.sh/react@18.3.1/",
-      "@google/genai": "https://esm.sh/@google/genai",
-      "lucide-react": "https://esm.sh/lucide-react@0.378.0"
-    }
-  }
-  </script>
   <style>
       .scrollbar-hide::-webkit-scrollbar { display: none; }
       .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
       .no-scrollbar::-webkit-scrollbar { display: none; }
       .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       
-      /* Smooth transitions for SEO dynamic components */
       .fade-enter { opacity: 0; }
       .fade-enter-active { opacity: 1; transition: opacity 300ms; }
   </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
 </head>
 <body class="bg-slate-50 text-slate-900">
   <div id="root"></div>
-  <script type="module" src="./index.tsx"></script>
+  <!-- O Vite prefere caminhos absolutos para o entry point no build -->
+  <script type="module" src="/index.tsx"></script>
 </body>
 </html>
