@@ -1,0 +1,7 @@
+{
+  "name": "Receitas Fit AI",
+  "description": "Uma aplicação moderna de receitas saudáveis com geração de conteúdo via Inteligência Artificial.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
